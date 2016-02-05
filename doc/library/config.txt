@@ -645,6 +645,8 @@ import theano and print the config variable, as in:
     mode for compiled cuda code which makes div and sqrt faster at the
     cost of precision.  This also disables support for denormal
     numbers.
+    
+    Note: Error occurs when fastmath is used together with fast_compile (`square of negative number is NA <https://github.com/Theano/Theano/issues/3953>`_)
 
 .. attribute:: config.optimizer_excluding
 
@@ -815,7 +817,7 @@ import theano and print the config variable, as in:
     Sets numpy's behavior for division by zero. ``'None'`` means using the
     default, defined by config.numpy.seterr_all.
 
-    This flag's value cannot be modified during the program execution.
+    This flag's value cannot be modified during the program execution.fa
 
 .. attribute:: config.numpy.seterr_over
 
